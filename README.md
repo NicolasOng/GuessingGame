@@ -1,4 +1,4 @@
-# CMPT383 Final Project
+# Guessing Game Final Project
 ### What is the overall goal of the project?
 
 The overall goal of this project is to implement a game inspired by a reality TV show I watched. In this game, two people submit numbers to run through a function, then are given an output. Using this information, the players have to guess what function is being applied to those numbers.
