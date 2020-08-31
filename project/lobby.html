@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Lobby</title>
+	
+<style>
+
+body {
+	background-color: #596475; /* C0 */
+}
+
+#container {
+	padding: 20px 20px 10px 20px;
+	border-radius: 25px;
+	margin: 100px auto;
+	width: 500px;
+	background-color: #49B6FF; /* C1 */
+}
+
+/*https://www.w3schools.com/css/tryit.asp?filename=trycss_forms*/
+
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: #DB504A; /* C4 */
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #D05040; /* C4, darker*/
+}
+
+#help {
+	/*https://stackoverflow.com/questions/139157/what-is-the-best-way-to-prevent-highlighting-of-text-when-clicking-on-its-contai*/
+	-webkit-user-select: none;  /* Chrome all / Safari all */
+	-moz-user-select: none;     /* Firefox all */
+	-ms-user-select: none;      /* IE 10+ */
+	text-align: center;
+	margin: 5px auto;
+	color: white;
+	font-family: Monospace;
+	font-size: 16px;
+	width: 16px;
+	cursor: pointer;
+}
+
+#explanation {
+	margin: 0 0 10px 0;
+	text-align: center;
+	color: white;
+	font-family: Monospace;
+	font-size: 16px;
+}
+
+</style>
+
+</head>
+<body>
+
+<div id='container'>
+
+	<form id="form" action="/game/" method="get">
+		<input type="text" id="id" name="id" placeholder="Game ID...">
+		<input type="submit">
+	</form>
+	
+	<p id='help'>?</p>
+</div>
+
+<template>
+	<div id='exp'>
+		<p id='explanation'>To join an existing game, enter its ID. To create a new game, enter the ID you'd like to create it with.</p>
+	</div>
+</template>
+	
+<script>
+	/*All lobby code goes here*/
+	var helpBtn = document.getElementById("help")
+	var container = document.getElementById("container")
+	
+	helpBtn.addEventListener("click", expandHelp);
+	document.getElementById("form").addEventListener("submit", nothing);
+	function expandHelp() {
+		console.log("expanding help...")
+		helpBtn.removeEventListener("click", expandHelp);
+		var temp = document.getElementsByTagName("template")[0];
+		var clon = temp.content.cloneNode(true);
+  		container.appendChild(clon);
+  		helpBtn.innerHTML = "^"
+  		helpBtn.addEventListener("click", closeHelp);
+	}
+	function closeHelp() {
+		console.log("closing help...")
+		document.getElementById("exp").remove();
+		helpBtn.innerHTML = "?"
+		helpBtn.addEventListener("click", expandHelp);
+	}
+	function nothing() {
+		console.log("nothing");
+	}
+</script>
+</body>
+</html>
+

@@ -1,0 +1,211 @@
+
+body {
+	background-color: #596475; /* C0 */
+}
+
+#big-container {
+	padding: 0;
+	margin: 0 auto;
+	width: 1100px;
+}
+
+#container {
+	float: left;
+	padding: 0;
+	margin: 0 auto;
+	width: 600px;
+	background-color: #49B6FF; /* C1 */
+	border-radius: 15px;
+}
+
+#timer {
+	margin: auto;
+	width: 500px;
+	height: 40px;
+}
+
+#time {
+	margin: 0;
+	text-align: center;
+	font-size: 35px;
+	font-family: sans-serif;
+}
+
+#currentTurn {
+	margin: auto;
+	width: 500px;
+	height: 125px;
+	background-color: #086788; /* C2 */
+	border-radius: 10px;
+}
+
+#inputs {
+	margin: auto;
+	width: 500px;
+	height: 50px;
+	text-align:center;
+	position:relative;
+	white-space: nowrap;
+	overflow-x: auto;
+}
+
+#answer {
+	margin: auto;
+	width: 250px;
+	height: 75px;
+	background-color: #EFE9F4; /* C3 */
+	color: #086788; /* C2 */
+	font-size: 55px;
+	text-align: center;
+	white-space: nowrap;
+	overflow-x: auto;
+	border-radius: 10px 10px 0px 0px;
+}
+
+.input {
+	font-size: 35px;
+	color: #EFE9F4; /* C3 */
+	position:relative;
+	margin:0 50px;
+	display:inline-block;
+}
+
+#pastTurns {
+	margin: auto;
+	width: 490px;
+}
+
+.pastTurn {
+	width: 100%;
+	background-color: #596475; /* C0 */
+	margin: 2px 0;
+	white-space: nowrap;
+	overflow-x: auto;
+	border-radius: 2.5px;
+}
+
+.pastInput {
+	margin: 0 25px;
+}
+
+.pastOutput {
+	float: right;
+	margin: 0 25px;
+}
+
+#guesses {
+	width: 500px;
+	margin: 25px auto;
+}
+
+.guess {
+	width: 100%;
+	height: 40px;
+	margin: 10px 0;
+	background-color: #DB504A; /* C4 */
+	border-radius: 5px;
+}
+
+.sinput {
+	margin: 10px 40px;
+	float: left;
+}
+
+.outputForm {
+	float: right;
+	margin: 8px;
+}
+
+.outputFormField {
+	width: 100px;
+}
+
+#inputForm {
+	width: 600px;
+	margin: auto;
+	position: absolute;
+	bottom: 10px;
+}
+
+#inputFormField {
+	width: 600px;
+	height: 50px;
+	margin: auto;
+	position: fixed;
+	bottom: 25px;
+	left: 50%;
+	margin-left: -300px;
+  	font-size:24px;
+}
+
+.player {
+	width: 150px;
+	height: 150px;
+	margin: 50px;
+	background-color: #49B6FF; /* C1 */
+	text-align: center;
+	font-size: 50px;
+	border-radius: 15px;
+}
+
+#player1 {
+	float: left;
+}
+
+#player2 {
+	float: right;
+}
+
+.totalscore {
+	margin: 10px auto;
+}
+
+.currentscore {
+	margin: 10px auto;
+}
+
+#BtnCont {
+	width: 500px;
+	height: 125px;
+	margin: auto;
+	position: fixed;
+	bottom: 112px;
+	left: 50%;
+	margin-left: -250px;
+  	font-size:24px;
+  	background-color: #49B6FF; /* C1 */
+  	text-align: center;
+  	border-radius: 15px;
+  	border-style: solid;
+  	border-width: 2.5px;
+  	border-color: #596475; /* C0 */
+}
+
+
+.nextBtn {
+	-webkit-user-select: none;  /* Chrome all / Safari all */
+	-moz-user-select: none;     /* Firefox all */
+	-ms-user-select: none;      /* IE 10+ */
+	float: left;
+	height: 75px;
+	width: 75px;
+	background-color: #DB504A; /* C4 */
+	position:relative;
+	margin: 25px 87.5px;
+	display:inline-block;
+	cursor: pointer;
+	border-radius: 50%;
+}
+
+.nbt {
+	margin: 10px;
+	font-family: sans-serif;
+	font-size: 20px;
+}
+
+#bumper {
+	height: 250px;
+	width: 200px;
+	margin: auto;
+}
+

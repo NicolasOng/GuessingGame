@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Game</title>
+
+<link rel="stylesheet" type="text/css" href="/static/style-sheet.css">
+
+</head>
+<body>
+
+<div id='big-container'>
+
+<div id='player1' class='player'>
+	<p class="totalscore">0</p>
+	<p class="currentscore">0</p>
+</div>
+
+<div id='container'>
+
+	<div id="timer">
+		<p id="time"></p>
+	</div>
+	
+	<div id="currentTurn">
+		<div id="inputs">
+			<span id="input1" class="input">???</span>
+			<span id="input2" class="input">???</span>
+		</div>
+		<p id="answer">???</p>
+	</div>
+	
+	<div id="pastTurns"></div>
+	
+	<div id="guesses"></div>
+	
+	<div id="bumper"></div>
+</div>
+
+<div id='player2' class='player'>
+	<p class="totalscore">0</p>
+	<p class="currentscore">0</p>
+</div>
+
+</div>
+
+<div id="BtnCont">
+	<div id='nextTurnBtn' class='nextBtn'>
+		<p id='ntbt' class='nbt'>next turn</p>
+	</div>
+	<div id='nextRoundBtn' class='nextBtn'>
+		<p id='nrbt' class='nbt'>next round</p>
+	</div>
+</div>
+
+<form id="inputForm" onsubmit="event.preventDefault();">
+	<input type="text" id="inputFormField" name="input" placeholder="Input...">
+</form>
+
+<template>
+	<div class='pastTurn'>
+		<span class="pastInput">???</span>
+		<span class="pastInput">???</span>
+		<span class="pastOutput">???</span>
+	</div>
+</template>
+
+<template>
+	<div class="guess">
+		<p class="sinput">???</p>
+		<p class="sinput">???</p>
+		<form class="outputForm" onsubmit="event.preventDefault();">
+			<input type="text" class="outputFormField" name="output" placeholder="Results in...">
+		</form>
+	</div>
+</template>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js" integrity="sha256-yr4fRk/GU1ehYJPAs8P4JlTgu0Hdsp4ZKrx8bDEDC3I=" crossorigin="anonymous"></script>
+<script src="/static/code.js"></script>
+</body>
+</html>
+
